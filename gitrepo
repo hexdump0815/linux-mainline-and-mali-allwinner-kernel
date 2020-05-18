@@ -1,0 +1,8 @@
+origin	https://github.com/megous/linux (fetch)
+origin	https://github.com/megous/linux (push)
+maybe required somehow too?
+origin	git://megous.com/linux-firmware (fetch)
+origin	git://megous.com/linux-firmware (push)
+origin	https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git (fetch)
+origin	https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git (push)
+

@@ -5,6 +5,7 @@ cd /compile/source/sunxi-mali
 export CROSS_COMPILE=""
 export KDIR=/compile/source/linux-megous-aw
 export INSTALL_MOD_PATH=/
+patch -p1 < /compile/doc/megous-aw/misc.ah3/fix-sunxi-mali-compile-v5.6.13.patch
 ./build.sh -r r6p2 -b
 #./build.sh -r r6p2 -i
 # for recompile: run ./build.sh -r r6p2 -c before to unapply patches
@@ -13,7 +14,8 @@ export kver=5.1.15-meg-ah3+
 mkdir /lib/modules/${kver}/extra
 cp mali.ko /lib/modules/${kver}/extra
 tar czf /compile/result/megous-aw/${kver}-mali-sunxi.tar.gz /lib/modules/${kver}/extra
-# insmod mali.ko or depmod mali
+# clean up the extra dir for possible further pure kernel packaging
+rm -rf /lib/modules/${kver}/extra
 
 xorg armsoc:
 
